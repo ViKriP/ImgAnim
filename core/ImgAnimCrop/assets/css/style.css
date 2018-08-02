@@ -1,0 +1,32 @@
+.txt {
+ color: red;
+}
+
+#ugl:hover {
+  fill: violet;
+}
+
+.kv:hover {
+  fill: violet;
+}
+
+polygon{
+fill:inherit;
+stroke:inherit;
+}
+
+.ImgCrop.active {
+color: white;
+background: #545b62;
+}
+
+.ImgCrop.err {
+color: red;
+}
+
+.ImgPoly.active {
+color: white;
+background: #545b62;
+}
+
+[hidden] { display: none }

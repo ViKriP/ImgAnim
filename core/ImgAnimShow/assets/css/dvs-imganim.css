@@ -1,0 +1,53 @@
+.clipParent{
+	float:left;
+}
+
+.kv:hover {
+	fill: violet;
+}
+
+polygon{
+	fill:inherit;
+	stroke:inherit;
+	opacity: 0.2;
+}
+
+polygon:hover{
+	fill: #cc0000;
+	opacity: 0.7;
+}
+
+.imgfull{
+display: none;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#etCanva{
+	margin: 5px auto;
+	display: block;
+	border: 1px solid #bbb;
+	padding: 5px;
+}
+
+.imgwrap{
+	text-align: center;
+}
+
+.imgcat{
+	width: 150px;
+	border: 1px solid #bbb;
+	display: inline-block;
+	margin: 5px;
+	padding: 10px;
+}
+
+.imgcat:hover{
+	background-color: #f0f0f0;
+	font-weight: bold;
+}
+
+.seled{
+	background-color: #f0f0f0;
+	font-weight: bold;
+}
