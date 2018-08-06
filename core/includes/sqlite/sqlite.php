@@ -43,7 +43,7 @@ class SQLite extends SQLite3
 	public function verSQLite3()
 	{
 		//SQLite3::version()[versionString]
-		return $this->version()[versionString];
+		//return $this->version()[versionString];
 	}
 
 	public function openMy()

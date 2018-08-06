@@ -3,7 +3,7 @@
  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <link rel="shortcut icon" href="core/ImgAnimShow/assets/img/favicon.ico" type="image/x-icon">
+    <link type="image/x-icon" href="core/ImgAnimShow/assets/img/favicon.ico" rel="shortcut icon">
     <link type="text/css" href="core/ImgAnimShow/assets/css/dvs-imganim.min.css" rel="stylesheet">
     <title>ImgAnimShow</title>
  </head>

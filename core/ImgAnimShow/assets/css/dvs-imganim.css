@@ -28,6 +28,8 @@ display: none;
 	display: block;
 	border: 1px solid #bbb;
 	padding: 5px;
+	max-width: 90%;
+	min-width: 60%;
 }
 
 .imgwrap{
