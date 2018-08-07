@@ -143,6 +143,8 @@ echo('
 </div>
 '.$ImgCropCr);
 
+echo(DIRSELF);
+
 echo(ImgCropDB($IDImgCat, $ImgCropID));
 echo(ImgCropInfoDB($ImgCropID));
 echo(ImgPolyDB($ImgCropID, $ImgPolyID));

@@ -4,6 +4,7 @@ require_once('header.php');
 require_once('ImgAnimCore.php');
 
 $ImgDirSys = DIRSYS;
+//$DirSelf = DIRSELF;
 
 $IDImgCat = 0;
 
@@ -163,6 +164,10 @@ $txt .=	'</form></div>';
 return $txt;
 }
  
-echo(__DIR__);
+echo(//__DIR__.'<br>'.
+//dirname($_SERVER['PHP_SELF']).'<br>'.
+DIRSELF.'<br>'
+//DIRSYS
+);
 require_once('footer.php');
 ?>
