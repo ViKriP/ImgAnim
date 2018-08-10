@@ -30,3 +30,8 @@ background: #545b62;
 }
 
 [hidden] { display: none }
+
+.hint {
+color: #b0b0d5;
+font-size: 7pt;
+}

@@ -117,7 +117,7 @@ $txt = '
 
 <div class="form-group">
 	<label for="IDImgDir">Лок Директория изображений</label>
-	<label for="IDImgDir">'.DIRSYS.'</label>
+	<label for="IDImgDir" class="hint">'.DIRSYS.'</label>
 	<input id="IDImgDir" name="ImgDir" class="form-control" type="text" value="' . $ImgDir . '">
 </div>
 
@@ -127,7 +127,8 @@ $txt = '
 </div>
 
 <div class="form-group">
-	<label for="IDDirShowWeb">Show Web Директория изображений</label>
+	<label for="IDDirShowWeb">Upd Web Директория изображений</label>
+	<label for="IDDirShowWeb" class="hint">'.PW_IMG.'/'.$IDImgCat.'/'.DN_UPD.'</label>
 	<input id="IDDirShowWeb" name="DirShowWeb" class="form-control" type="text" value="' . $DirShowWeb . '">
 </div>
 
@@ -164,10 +165,10 @@ $txt .=	'</form></div>';
 return $txt;
 }
  
-echo(//__DIR__.'<br>'.
+/*echo(//__DIR__.'<br>'.
 //dirname($_SERVER['PHP_SELF']).'<br>'.
 DIRSELF.'<br>'
 //DIRSYS
-);
+);*/
 require_once('footer.php');
 ?>

@@ -21,8 +21,6 @@ echo('<div id="ImgAnim-wrap">
 <div class="imgwrap">
 <h3>Укажите этаж</h3>');
 
-echo(DIRSELF);
-
 ImgUI($ImgCatID);
 
 //echo($DirShowWeb);
