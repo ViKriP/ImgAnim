@@ -253,6 +253,31 @@ function B1T3P10_err($P1) {
 	}
 }
 
+function B1T3P5_stat($P1) {
+$stat = B1T3P(5, $P1);
+
+switch ($stat) {
+    case 1:
+        $StatCl = 'now';
+        break;
+    case 2:
+        $StatCl = 'nowupd';
+        break;
+    case 3:
+        $StatCl = 'new';
+        break;
+    case 4:
+        $StatCl = 'newupd';
+        break;
+    default:
+       $StatCl = 'err';
+       break;
+}
+
+return $StatCl;
+
+}
+
 
 //-------
 //--T4---

@@ -127,8 +127,8 @@ $txt = '
 </div>
 
 <div class="form-group">
-	<label for="IDDirShowWeb">Upd Web Директория изображений</label>
-	<label for="IDDirShowWeb" class="hint">'.PW_IMG.'/'.$IDImgCat.'/'.DN_UPD.'</label>
+	<label for="IDDirShowWeb">Tmp Web Директория изображений</label>
+	<label for="IDDirShowWeb" class="hint">'.PW_IMG.'/'.$IDImgCat.'/'.DN_TMP.'</label>
 	<input id="IDDirShowWeb" name="DirShowWeb" class="form-control" type="text" value="' . $DirShowWeb . '">
 </div>
 

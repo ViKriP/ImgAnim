@@ -24,6 +24,22 @@ background: #545b62;
 color: red;
 }
 
+.ImgCrop.new {
+color: #da5b2a;
+}
+
+.ImgCrop.newupd {
+color: #852ada;
+}
+
+.ImgCrop.nowupd {
+color: #2a3fda;
+}
+
+.ImgCrop.now {
+color: #000000;
+}
+
 .ImgPoly.active {
 color: white;
 background: #545b62;

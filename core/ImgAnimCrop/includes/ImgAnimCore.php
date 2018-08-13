@@ -78,9 +78,9 @@ function ImgCropDB($IDImgCat, $ImgCropID){
 	while ($ImgCrop = $db->fetchArray()) {
 
 		if($ImgCropID == $ImgCrop['B1T3P1']){
-			$txt .='<button id="' . $ImgCrop['B1T3P6'] ./* '_' . $ImgCrop['B1T3P1'] .*/ '" class="btnKv ImgCrop active '.B1T3P10_err($ImgCrop['B1T3P1']).'" type="submit" name="BtnImgF" onclick=img_etag(this.id) value="' . $ImgCrop['B1T3P1'] . '">' . $ImgCrop['B1T3P2'] . '</button>'; 
+			$txt .='<button id="' . $ImgCrop['B1T3P6'] ./* '_' . $ImgCrop['B1T3P1'] .*/ '" class="btnKv ImgCrop active '.B1T3P5_stat($ImgCrop['B1T3P1']).'" type="submit" name="BtnImgF" onclick=img_etag(this.id) value="' . $ImgCrop['B1T3P1'] . '">' . $ImgCrop['B1T3P2'] . '</button>'; 
 		} else {
-			$txt .='<button id="' . $ImgCrop['B1T3P6'] ./* '_' . $ImgCrop['B1T3P1'] .*/ '" class="btnKv ImgCrop '.B1T3P10_err($ImgCrop['B1T3P1']).'" type="submit" name="BtnImgF" onclick=img_etag(this.id) value="' . $ImgCrop['B1T3P1'] . '">' . $ImgCrop['B1T3P2'] . '</button>'; 
+			$txt .='<button id="' . $ImgCrop['B1T3P6'] ./* '_' . $ImgCrop['B1T3P1'] .*/ '" class="btnKv ImgCrop '.B1T3P5_stat($ImgCrop['B1T3P1']).'" type="submit" name="BtnImgF" onclick=img_etag(this.id) value="' . $ImgCrop['B1T3P1'] . '">' . $ImgCrop['B1T3P2'] . '</button>'; 
 		}
 	}
 

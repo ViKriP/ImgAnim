@@ -122,12 +122,10 @@ if (isset($_POST['ImgPolyDel'])) {
 	$ImgCropID = clean($_POST['ImgCropID']);
 }
 
-//echo(DIRSELF);
-//require 'core/ImgAnimCrop/includes/auth/index.php';
 
 if ( isset ($_SESSION['logged_user']) ) {
 
-echo '<a href="'. URLSELF(__DIR__).'/auth/logout.php'.'">ВЫХОД</a>';
+echo '<a href="'. URLSELF(__DIR__).'/auth/logout.php'.'">ВЫХОД</a><br />';
 echo hash_file('md5', 'http://objdev/Novodv1/DEV_PlanPresent/plans/DEV/out_jpg/min'.'/'.'01-min.jpg');
 //echo('<br>'.date('Ymd H:i:s').'<br>');
 echo(InDB($IDImgCat));
@@ -149,11 +147,15 @@ echo('
 </div>
 '.$ImgCropCr);
 
+echo '<div style="border: 1px solid #9b9bc0;background: #cdcdcd;">';
 echo(ImgCropDB($IDImgCat, $ImgCropID));
 echo(ImgCropInfoDB($ImgCropID));
+echo '</div>';
 echo(ImgPolyDB($ImgCropID, $ImgPolyID));
 echo(ImgPolyInfoDB($ImgPolyID));
+
 } else {
+
 echo 'Вы не авторизованы<br/>
 <a href="'. URLSELF(__DIR__).'/auth/login.php'.'">Авторизация</a>
 <a href="'. URLSELF(__DIR__).'/auth/signup.php'.'">Регистрация</a>';

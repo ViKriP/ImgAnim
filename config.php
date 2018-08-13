@@ -11,6 +11,8 @@ define( 'PW_SELF', PW_HOSTNAME . PL_SELF_SRVNO );
 define( 'PW_IMG', PW_SELF . '/img' );
 
 define( 'DN_UPD', 'upd' );
+define( 'DN_TMP', 'tmp' );
+//define( 'PL_TMP', PL_IMG.'tmp' );
 
 
 function URLSELF($dir) {
