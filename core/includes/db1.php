@@ -428,6 +428,160 @@ $db->Close();
 unset($db);
 }
 
+function B1T5_sel2($B1T5P4) {
+$db = new SQLite_prj(DIRDB1DB);
+		
+	return $db->sel("B1T5", "*", "B1T5P4 = " . $B1T5P4);
+
+$db->Close();
+unset($db);
+}
+
+function B1T5_upd($B1T5P1, $ValArr) {
+$db = new SQLite_prj(DIRDB1DB);
+
+$count = count($ValArr);
+foreach ($ValArr as $key => $val) {
+	if (--$count == 0) {
+		$rez .= "B1T5P" . $key . "=" . $val;
+	} else {
+		$rez .= "B1T5P" . $key . "=" . $val . ",";
+	}
+}
+var_dump($ValArr);
+
+	$db->Upd("B1T5", $rez, "B1T5P1 = " . $B1T5P1);
+
+$db->Close();
+unset($db);
+}
+
+function B1T5_ins($ValArr)
+{
+$db = new SQLite_prj(DIRDB1DB);
+	$Tbl = 'B1T5'; 
+
+$count = count($ValArr);
+foreach ($ValArr as $key => $val) {
+	if (--$count == 0) {
+		$Ple .= "B1T5P" . $key;
+		$PleVal .= $val;
+	} else {
+		$Ple .= "B1T5P" . $key . ",";
+		$PleVal .= $val . ",";
+	}
+}
+
+	$db->Insert($Tbl, $Ple, $PleVal);
+
+	return $db->MaxT($Tbl, 'B1T5P1');
+
+$db->Close();
+unset($db);
+}
+
+function B1T5_del($B1T5P1) {
+$db = new SQLite_prj(DIRDB1DB);
+
+	$db->Del("B1T5", "B1T5P1 = " . $B1T5P1);
+
+$db->Close();
+unset($db);
+}
+
+function B1T5P($P, $P1) {
+$db = new SQLite_prj(DIRDB1DB);
+
+$Tbl = "B1T5";
+$TblP = "B1T5P";
+$PleID = "B1T5P1";
+
+switch ($P) {
+    case 2:
+        $Ple = $TblP . $P;
+        break;
+    case 3:
+        $Ple = $TblP . $P;
+        break;
+    case 4:
+        $Ple = $TblP . $P;
+        break;
+    default:
+       return false;
+	exit(1);
+}
+
+	return $db->selSingle($Tbl, $Ple, $PleID . " = " . $P1);
+
+$db->Close();
+unset($db);
+}
+
+function B1T5PP($PSelect, $PSearch, $PSearchVal) {
+$db = new SQLite_prj(DIRDB1DB);
+
+$Tbl = "B1T5";
+$TblP = "B1T5P";
+
+$PleSelect = $TblP . $PSelect;
+$PleSearch = $TblP . $PSearch;
+
+return $db->selSingle($Tbl, $PleSelect, $PleSearch . " = " . $PSearchVal);
+
+$db->Close();
+unset($db);
+}
+
+
+//--------
+//---T7---
+
+function B1T7_ins($ValArr)
+{
+$db = new SQLite_prj(DIRDB1DB);
+	$Tbl = 'B1T7'; 
+
+$count = count($ValArr);
+foreach ($ValArr as $key => $val) {
+	if (--$count == 0) {
+		$Ple .= "B1T7P" . $key;
+		$PleVal .= $val;
+	} else {
+		$Ple .= "B1T7P" . $key . ",";
+		$PleVal .= $val . ",";
+	}
+}
+
+	$db->Insert($Tbl, $Ple, $PleVal);
+
+	return $db->MaxT($Tbl, 'B1T7P1');
+
+$db->Close();
+unset($db);
+}
+
+// del po P3
+function B1T7_delP3($B1T7P3) {
+$db = new SQLite_prj(DIRDB1DB);
+
+	$db->Del("B1T7", "B1T7P3 = " . $B1T7P3);
+
+$db->Close();
+unset($db);
+}
+
+function B1T7P1($P2, $P3) {
+$db = new SQLite_prj(DIRDB1DB);
+
+	return $db->selSingle("B1T7", "B1T7P1", "B1T7P2 = " . $P2 . " and B1T7P3 = " . $P3);
+
+$db->Close();
+unset($db);
+}
+
+
+
+
 //---------
 //--JOIN---
 
@@ -447,6 +601,19 @@ LEFT JOIN B1T2 ON B1T2.B1T2P1 = B1T3.B1T3P4 WHERE B1T2.B1T2P1 = " . $B1T2P1 . ")
 DELETE FROM B1T2 WHERE B1T2P1 = " . $B1T2P1;
 
 	$DB->exec($sql);
+
+$DB->Close();
+unset($DB);
+}
+
+function B1T5T7_sel($B1T7P3) {
+$DB = new SQLite_prj(DIRDB1DB);
+
+$sql ="
+SELECT B1T5P1, B1T5P2 FROM B1T5, B1T7
+WHERE B1T7.B1T7P2 = B1T5.B1T5P1 and B1T7.B1T7P3 = ".$B1T7P3;
+
+	return $db->sel("B1T5, B1T7", "B1T5P1, B1T5P2", $sql);
 
 $DB->Close();
 unset($DB);

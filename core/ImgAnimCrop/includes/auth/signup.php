@@ -12,7 +12,8 @@ PL_SELF_SRVNO."<br>".
 URLSELF(__DIR__)."<br>";
 */
 
-error_reporting(E_ALL); ini_set('display_errors', true);
+//error_reporting(E_ALL); ini_set('display_errors', true);
+
 /*session_start();
 echo '<a href="?', time(), '">refresh</a>', "\n";
 

@@ -57,6 +57,7 @@ if (isset($_POST['ImgCatDel'])) {
 	$IDImgCat = 0;
 }
 
+
 echo(InDB($IDImgCat));
 echo('
 <a href="../../../index.php?do=crop" title="Home" class="btn btn-primary">Home</a>

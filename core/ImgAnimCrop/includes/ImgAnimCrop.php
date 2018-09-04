@@ -10,6 +10,17 @@ $ImgCropID = '0';
 if (isset($_POST['options'])) {
 	$IDImgCat = clean($_POST['options']);
 $ImgCropCr = '
+<form name="ImgCropFilterForm" action="core/ImgAnimCrop/includes/ImgCropFilter.php" method="post" role="form">
+	<div class = "container">
+	<div class = "row">
+		<div class="form-group">
+			<input type="hidden" name="IDImgCat" value="' . $IDImgCat . '">
+		</div>
+		<button type="submit" class="btn btn-primary">ImgCropFilter</button>
+	</div>
+	</div>
+</form>
+
 <input type="button" value="Создать ImgCrop" onclick="ToHide(\''.'ImgCropAdd'.'\');" />
 <div id="ImgCropAdd" hidden>
 <form name="ImgCropForm" method="post" role="form">
@@ -27,6 +38,7 @@ $ImgCropCr = '
 	</div>
 </form>
 </div>
+
 ';
 }
 
@@ -144,8 +156,9 @@ echo('
 	</div>
 </form>
 
-</div>
 '.$ImgCropCr);
+
+//echo 'ok '.$IDImgCat;
 
 echo '<div style="border: 1px solid #9b9bc0;background: #cdcdcd;">';
 echo(ImgCropDB($IDImgCat, $ImgCropID));
