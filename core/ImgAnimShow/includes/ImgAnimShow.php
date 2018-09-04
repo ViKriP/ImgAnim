@@ -37,7 +37,7 @@ function ImgUI($ImgCatID){
 
 $pref = 'dvs-';
 
-$ImgFiltrDb = B1T5_sel();
+$ImgFiltrDb = B1T_SelId("5", $ImgCatID, "4");//B1T5_sel();
 //$ImgCropDb = B1T3_sel();
 
 
@@ -49,7 +49,7 @@ while ($ImgFiltr = $ImgFiltrDb->fetchArray()) {
 	$DirShowWeb = B1T2P(7, $ImgCatID);
 
 	$i = 1;
-$txtHtml = '<div class="imgcat"><p>'.$ImgFilterName.'</p>
+$txtHtml = '<div class="imgcat"><p style="margin: 5px;">'.$ImgFilterName.'</p>
 <select id="ImgFiltr'.$ImgFiltr['B1T5P1'].'" size="1" class="pagin-commerce" onchange="ImgFiltr(this.id)"><option value="0"></option>';
 
 	while ($ImgCrop = $ImgCropDb->fetchArray()) {

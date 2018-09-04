@@ -46,7 +46,6 @@ function ImgCropDBIns($IDImgCat, $ImgDir) {
 foreach (glob($ImgDir."/*.jpg") as $filename) {
 $FName = basename($filename);
 	if (B1T3_selW2($IDImgCat, $FName) == '') {
-//echo('ImgCropDBIns 2 '.basename($filename));
 
 	$ImgCropSize = getimagesize ($filename);
 

@@ -21,11 +21,11 @@ class SQLite_Prj extends SQLite_BTP
 			VALUES (1, 'Paul');";
 
 		$ret = $this->exec("INSERT INTO ImgCat (ImgCat1, Name) VALUES (1, 'Paul1');");
-if(!$ret) {
-      echo $this->lastErrorMsg();
-   } else {
-      echo "Records created successfully\n";
-   }
+		if(!$ret) {
+		      echo $this->lastErrorMsg();
+		} else {
+			echo "Records created successfully\n";
+		}
 //		echo($this->DBPath);
 	}
 

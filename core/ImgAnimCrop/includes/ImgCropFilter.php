@@ -109,7 +109,8 @@ $ImgCropImgW = B1T3P(7, $ImgCropID);
 $ImgCropImgH = B1T3P(8, $ImgCropID);*/
 //$ImgCropFilterNow = B1T3P(9, $ImgCropID);
 
-$db = B1T5_sel();
+//$db = B1T5_sel();
+$db = B1T5_sel2($ImgCatID);
 while ($ImgCropFilter = $db->fetchArray()) {
 	if ($ImgCropFilter['B1T5P1'] == $ImgCropFilterNow) {
 		$ImgCropFilterSeleOpt .= '<option value="' . $ImgCropFilter['B1T5P1'] . '" selected>' . $ImgCropFilter['B1T5P2'] . '</option>';
